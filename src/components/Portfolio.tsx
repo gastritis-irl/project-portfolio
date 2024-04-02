@@ -12,7 +12,9 @@ const Portfolio = () => {
     ];
 
     return (
-        <Box sx={{flexGrow: 1, m: 2}}>
+        <Box sx={{flexGrow: 1, m: 2, zIndex: 10, position: 'relative' }}
+             style={{zIndex: 10}}
+        >
             <Typography variant="h4" component="div" gutterBottom>
                 Bardocz Ferencz-Csaba
             </Typography>
