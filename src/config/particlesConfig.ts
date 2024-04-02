@@ -1,15 +1,103 @@
-const particlesConfig = {
+import theme from "../theme/theme.tsx";
+import IParticlesOptions from "react-tsparticles";
+
+const particlesConfig: IParticlesOptions = {
+    // background: {
+    //     color: {
+    //         value: "#0d47a1",
+    //     },
+    // },
+    fpsLimit: 60,
+    interactivity: {
+        events: {
+            onClick: {
+                enable: true,
+                mode: "push",
+            },
+            onHover: {
+                enable: true,
+                mode: "repulse",
+            },
+            resize: true,
+        },
+        modes: {
+            bubble: {
+                distance: 400,
+                duration: 2,
+                opacity: 0.8,
+                size: 40,
+            },
+            grab: {
+                distance: 400,
+                line_linked: {
+                    opacity: 1,
+                },
+            },
+            push: {
+                quantity: 4,
+            },
+            remove: {
+                quantity: 2,
+            },
+            trail: {
+                delay: 0.005,
+                quantity: 5,
+                particles: {
+                    color: theme.palette.primary.main,
+                    shape: {
+                        type: "circle",
+                    },
+                    size: 5,
+                },
+            },
+            repulse: {
+                distance: 200,
+                duration: 0.4,
+            },
+        },
+    },
     particles: {
+        color: {
+            value: '#f3e80d',
+        },
+        links: {
+            color: theme.palette.primary.main,
+            distance: 200,
+            enable: true,
+            opacity: 0.2,
+            width: 5,
+        },
+        move: {
+            direction: "none",
+            enable: true,
+            outModes: {
+                default: "out",
+
+            },
+
+            random: true,
+            speed: 1,
+            straight: false,
+        },
         number: {
-            value: 80,
             density: {
                 enable: true,
-                value_area: 800
-            }
+                area: 800,
+            },
+            value: 15,
         },
-        // Add more configuration options as needed
+        opacity: {
+            value: 0.5,
+        },
+        shape: {
+            type: ["star"],
+        },
+        size: {
+            value: {min: 4, max: 6},
+        },
     },
-    // More configurations like interactivity, modes, etc.
+    detectRetina: true,
+    zLayers: 2,
 };
 
 export default particlesConfig;
