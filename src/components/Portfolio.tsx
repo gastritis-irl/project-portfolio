@@ -1,13 +1,18 @@
 // src/components/Portfolio.tsx
 import {Box, Card, CardContent, Grid, Typography} from '@mui/material';
+import PDFViewer from './PDFViewer.tsx'; // Import the PPTXViewer component
 
 const Portfolio = () => {
     const projects = [
         {
             name: 'SportGH',
-            description: 'This is a sports equipments renting platform providing a wide range of sports equipments from users to users.'
+            description: 'This is a sports equipments renting platform providing a wide range of sports equipments from users to users.',
+            file: '../projects/Sportgh_group.pdf' // Add the path to the pptx file
         },
         {name: 'Project 2', description: 'This is project 2'},
+        {name: 'Project 3', description: 'This is project 3'},
+        {name: 'Project 4', description: 'This is project 4'},
+        {name: 'Project 5', description: 'This is project 5'},
         // Add more projects here
     ];
 
@@ -35,6 +40,7 @@ const Portfolio = () => {
                                 <Typography variant="body2">
                                     {project.description}
                                 </Typography>
+                                {project.file && <PDFViewer file={project.file} />}
                             </CardContent>
                         </Card>
                     </Grid>
