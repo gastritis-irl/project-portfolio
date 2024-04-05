@@ -1,12 +1,11 @@
 import theme from "../theme/theme.tsx";
-import IParticlesOptions from "react-tsparticles";
 
-const particlesConfig: IParticlesOptions = {
-    // background: {
-    //     color: {
-    //         value: "#0d47a1",
-    //     },
-    // },
+const particlesConfig: object = {
+    background: {
+        color: {
+            value: 'inherit'
+        },
+    },
     fpsLimit: 60,
     interactivity: {
         events: {

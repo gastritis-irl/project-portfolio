@@ -1,8 +1,0 @@
-/* src/style/MovingElements.css */
-.small-element {
-    position: absolute;
-    width: 10px;
-    height: 10px;
-    background: white;
-    border-radius: 50%;
-}
