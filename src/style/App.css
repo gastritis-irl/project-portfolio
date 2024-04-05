@@ -1,51 +1,58 @@
 body {
-  animation: gradient 5s ease-in-out infinite;
-  background-size: 200% 200%;
+    animation: gradient 20s ease-in-out infinite;
+    background-size: 200% 200%;
 }
 
 #root {
-  margin: 0 0 2rem 0;
-  padding: 2rem;
-  text-align: left;
-  font-family: 'Roboto', sans-serif;
-  width: 100%;
+    margin: 0 0 2rem 0;
+    padding: 2rem;
+    text-align: left;
+    font-family: 'Roboto', sans-serif;
+    width: 100%;
+    z-index: 1;
 }
 
 @keyframes gradient {
-  0% {
-    background: #222bec; /* change as per your preference */
-  }
-  50% {
-    background: #ae57ff; /* change as per your preference */
-  }
-  100% {
-    background: #222bec; /* change as per your preference */
-  }
+    0% {
+        background: #222bec;
+    }
+    25% {
+        background: #656bf1;
+    }
+    50% {
+        background: #0d79e5;
+    }
+    75% {
+        background: #050a58;
+    }
+    100% {
+        background: #222bec;
+    }
 }
 
 /* Rest of your CSS */
 
 .logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+    height: 6em;
+    padding: 1.5em;
+    will-change: filter;
+    transition: filter 300ms;
 }
 
 .logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+    filter: drop-shadow(0 0 2em #646cffaa);
 }
 
 .logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+    filter: drop-shadow(0 0 2em #61dafbaa);
 }
 
 .card {
-  padding: 2em;
-  border-radius: 10px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+    padding: 2em;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
 }
 
 .read-the-docs {
-  color: #888;
+    color: #888;
 }
